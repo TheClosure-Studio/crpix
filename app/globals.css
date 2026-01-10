@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+.font-space-grotesk {
+  font-family: var(--font-space-grotesk), Arial, sans-serif;
+}
+
+.font-spaceMono {
+  font-family: var(--font-space-mono), Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; 
+  /* Offset for fixed floating navbar */
+}
+
+body {
+  background-color: white;
+  color: #171717;
+  font: var(--font-spaceMono), var(--font-space-grotesk), Arial, sans-serif;
+}
+
+/* Hide Scrollbar Utility */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
