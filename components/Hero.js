@@ -25,7 +25,7 @@ export default function Hero() {
           </h1>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Link
+            <a
               href="#contact"
               className="px-8 py-3 bg-[#D4CDBA] hover:bg-[#cca20b] text-neutral-900 font-semibold rounded shadow-md transition-colors text-center flex items-center justify-center gap-2"
             >
@@ -33,14 +33,14 @@ export default function Hero() {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                </svg>
-            </Link>
-            <Link
+            </a>
+            <a
               href="#gallery"
               className="px-8 py-3 bg-[#D4CDBA] hover:bg-[#cca20b] text-neutral-900 font-semibold rounded shadow-md transition-colors text-center flex items-center justify-center gap-2"
             >
               Explore Gallery 
              
-            </Link>
+            </a>
           </div>
         </div>
       </div>

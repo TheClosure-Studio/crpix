@@ -40,22 +40,22 @@ export default function Navbar() {
             <Link href="/" className="text-md font-semibold text-neutral-900 hover:text-yellow-800 transition-colors">
               Home
             </Link>
-            <Link href="#gallery" className="text-md font-semibold text-neutral-900 hover:text-yellow-800 transition-colors">
+            <a href="#gallery" className="text-md font-semibold text-neutral-900 hover:text-yellow-800 transition-colors">
               Gallery
-            </Link>
-            <Link href="#about" className="text-md font-semibold text-neutral-900 hover:text-yellow-800 transition-colors">
+            </a>
+            <a href="#about" className="text-md font-semibold text-neutral-900 hover:text-yellow-800 transition-colors">
               About
-            </Link>
+            </a>
           </div>
         </div>
 
         {/* Contact Button (Separate) */}
-        <Link
+        <a
           href="#contact"
           className="bg-[#FBC02D]/80 hover:bg-[#F9A825] text-neutral-900 font-bold px-6 py-4 rounded-xl shadow-md transition-colors text-md whitespace-nowrap hidden font-space-grotesk h-12 md:flex items-center justify-center" 
         >
           Contact Us
-        </Link>
+        </a>
       </div>
     </nav>
   );

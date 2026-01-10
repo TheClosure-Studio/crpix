@@ -6,12 +6,14 @@ import { useRouter } from "next/navigation";
 export default function AdminLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   const handleLogin = (e) => {
     e.preventDefault();
     
     if (username === "cr-pix-007" && password === "Koushik07") {
+        setIsLoading(true);
       // Set cookie for middleware
       document.cookie = "admin_authenticated=true; path=/; max-age=86400"; // 1 day expiration
       router.push("/admin");
@@ -36,6 +38,7 @@ export default function AdminLogin() {
               className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
               placeholder="Username"
               required
+              disabled={isLoading}
             />
           </div>
           
@@ -48,14 +51,16 @@ export default function AdminLogin() {
               className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
               placeholder="••••••••"
               required
+              disabled={isLoading}
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-black text-white py-3.5 rounded-xl font-bold font-space-grotesk hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200"
+            disabled={isLoading}
+            className="w-full bg-black text-white py-3.5 rounded-xl font-bold font-space-grotesk hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
           >
-            Enter Dashboard
+            {isLoading ? "Entering..." : "Enter Dashboard"}
           </button>
         </form>
       </div>
