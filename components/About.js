@@ -32,12 +32,12 @@ export default function About() {
           About Us.
         </h2>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-7 md:gap-8 mb-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-7 md:gap-30 mb-20">
           <div className="flex-1 space-y-2">
             <h3 className="text-2xl md:text-4xl font-semibold leading-snug">
               Capture moments that carve a forever space in your heart.
             </h3>
-            <p className="text-neutral-400 font-mono text-sm leading-relaxed font-space-grotesk">
+            <p className="text-neutral-400 font-mono text-lg leading-relaxed font-space-grotesk">
               Welcome to CR Pix Photography, a premier photography studio based in Tirupati,
               Andhra Pradesh, dedicated to transforming everyday moments into timeless
               masterpieces. Our team of skilled photographers blends creativity with technical
@@ -47,8 +47,8 @@ export default function About() {
             </p>
           </div>
 
-          <div className="flex-1 flex justify-center md:justify-end">
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
+          <div className=" lg:flex justify-center md:justify-end hidden  ">
+            <div className="relative w-50 h-50 md:w-60 md:h-60 px-20">
               <Image
                 src="/logo.svg"
                 alt="CR Pix Logo"
@@ -60,11 +60,11 @@ export default function About() {
         </div>
 
         {/* Team Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-3 gap-2   justify-items-center">
           {TEAM_MEMBERS.map((member) => (
             <div
               key={member.id}
-              className="relative w-full max-w-sm aspect-[3/3] rounded-lg overflow-hidden "
+              className="relative w-full max-w-sm aspect-[3/4] lg:aspect-[3/3] rounded-lg overflow-hidden "
             >
               {/* Profile Image */}
               <Image

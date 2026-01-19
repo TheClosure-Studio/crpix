@@ -107,7 +107,7 @@ export default function ImagesPage() {
       </div>
 
       {loading && projects.length === 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {Array.from({ length: 8 }).map((_, i) => (
                 <div key={i} className="bg-gray-100 rounded-2xl aspect-[3/4] animate-pulse" />
             ))}
@@ -118,7 +118,7 @@ export default function ImagesPage() {
         </p>
       ) : (
         <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
                 {projects.map((project) => (
                 <div key={project.id} className="group bg-black rounded shadow-sm border border-neutral-100 overflow-hidden hover:shadow-md transition-all">
                     <div className="relative aspect-[3/4]">

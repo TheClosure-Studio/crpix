@@ -26,9 +26,10 @@ export default function Footer() {
         <div className="h-px w-full bg-neutral-300 mb-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-xs font-bold text-neutral-900">
-          <p>Terms & Conditions</p>
-          <p>All Rights Reserved</p>
-          <p>Tirupati, India</p>
+          <div className="flex w-full justify-between">
+            <p>©{new Date().getFullYear()} CR Pix Photography, All rights reserved.</p>
+            <p>Tirupati, India</p>
+          </div>
         </div>
       </div>
     </footer>

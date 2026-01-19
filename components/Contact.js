@@ -71,11 +71,11 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-black text-white border-t border-neutral-100">
-      <div className="px-20">
+      <div className="lg:px-20 px-7">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-0 w-full items-start justify-center">
           
           {/* Left Column: Heading & Intro */}
-          <div className="flex-1 space-y-3 w-1/2">
+          <div className="flex-1 space-y-3 lg:w-1/2">
             <h2 className="text-5xl md:text-7xl font-bold leading-tight font-space-grotesk tracking-tight">
               Let&apos;s Create <br/>
               <span className="text-neutral-500">Together.</span>

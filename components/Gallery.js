@@ -240,24 +240,24 @@ export default function Gallery() {
         </div>
 
         {/* Filter Toolbar */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
+        <div className="flex flex-row  items-center justify-center gap-4 mb-12">
             
             {/* Filter Button (Multi-Select) */}
             <button 
                 onClick={openFilterModal}
-                className="flex items-center gap-2 bg-white border border-neutral-200 px-6 py-2 rounded-full hover:shadow-md transition-all group flex-shrink-0"
+                className="flex items-center gap-2 bg-white border border-neutral-200 px-2 lg:px-6 py-1 lg:py-2 rounded-full hover:shadow-md transition-all group flex-shrink-0"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-neutral-500 group-hover:text-black transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3 lg:w-5 lg:h-5 text-neutral-500 group-hover:text-black transition-colors">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
                 </svg>
-                <span className="font-bold text-neutral-900 text-sm">Filter</span>
+                <span className="font-bold text-neutral-900 lg:text-sm text-xs">Filter</span>
                 {activeFilters.length > 0 && !activeFilters.includes("All") && (
                     <span className="bg-black text-white text-[10px] px-2 py-0.5 rounded-full">{activeFilters.length}</span>
                 )}
             </button>
 
             {/* divider */}
-            <div className="hidden md:block w-px h-8 bg-neutral-200" />
+            <div className="block w-px lg:h-8 h-4 bg-neutral-200" />
 
             {/* Quick Categories (Horizontal Scroll) */}
             {/* Quick Categories (Horizontal Scroll) */}
@@ -265,12 +265,12 @@ export default function Gallery() {
                 {/* Left Gradient/Shadow */}
                 <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
 
-                <div className="flex flex-nowrap items-center gap-3 w-full overflow-x-auto px-4 md:px-0 scrollbar-hide">
+                <div className="flex flex-nowrap items-center gap-3 w-full overflow-x-auto px-2 lg:px-4 lg:py-2 rounded-full scrollbar-hide">
                     {categories.map((category) => (
                         <button
                             key={category}
                             onClick={() => handleQuickFilter(category)}
-                            className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium border transition-colors flex-shrink-0 ${
+                            className={`whitespace-nowrap px-2 lg:px-4 py-1 lg:py-2 rounded-full text-xs lg:text-sm font-medium border transition-colors flex-shrink-0 ${
                                 activeFilters.includes(category) && activeFilters.length === 1
                                 ? "bg-yellow-500 border-yellow-500 text-neutral-900 shadow-sm"
                                 : "bg-[#FFF9E5] border-transparent text-neutral-700 hover:bg-yellow-100"
@@ -337,7 +337,7 @@ export default function Gallery() {
         <div className={`grid gap-2 mb-12 ${
             activeTab === "Videos" 
             ? "grid-cols-1 md:grid-cols-2 " 
-            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
+            : "grid-cols-2  md:grid-cols-3 xl:grid-cols-4"
         }`}>
           {loading && items.length === 0 ? (
               // Skeleton Loader
