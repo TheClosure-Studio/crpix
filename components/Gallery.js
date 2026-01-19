@@ -209,16 +209,16 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-24 bg-white text-neutral-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-8 font-space-grotesk">
+        <h2 className="md:text-4xl text-2xl font-bold text-center md:mb-8 mb-6 font-space-grotesk">
           Explore Our {activeTab}
         </h2>
 
         {/* Media Type Toggle */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-gray-200 rounded-lg p-1 flex">
+        <div className="flex justify-center mb-6">
+          <div className="bg-gray-200 rounded-lg p-1 flex text-sm md:text-base">
             <button
               onClick={() => setActiveTab("Gallery")}
-              className={`px-8 py-2 rounded-md font-medium transition-all ${
+              className={`md:px-8 px-2 md:py-2 py-1 rounded-md font-medium transition-all ${
                 activeTab === "Gallery"
                   ? "bg-yellow-500 shadow-sm text-neutral-900"
                   : "text-neutral-600 hover:text-neutral-900"
@@ -228,7 +228,7 @@ export default function Gallery() {
             </button>
             <button
               onClick={() => setActiveTab("Videos")}
-              className={`px-8 py-2 rounded-md font-medium transition-all ${
+              className={`md:px-8 px-2 md:py-2 py-1 rounded-md font-medium transition-all ${
                 activeTab === "Videos"
                   ? "bg-yellow-500 shadow-sm text-neutral-900"
                   : "text-neutral-600 hover:text-neutral-900"
@@ -240,7 +240,7 @@ export default function Gallery() {
         </div>
 
         {/* Filter Toolbar */}
-        <div className="flex flex-row  items-center justify-center gap-4 mb-12">
+        <div className="flex flex-row  items-center justify-center md:gap-4 mb-6">
             
             {/* Filter Button (Multi-Select) */}
             <button 
@@ -263,9 +263,7 @@ export default function Gallery() {
             {/* Quick Categories (Horizontal Scroll) */}
             <div className="relative flex-1 min-w-0 w-full overflow-hidden group">
                 {/* Left Gradient/Shadow */}
-                <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-
-                <div className="flex flex-nowrap items-center gap-3 w-full overflow-x-auto px-2 lg:px-4 lg:py-2 rounded-full scrollbar-hide">
+                <div className="flex flex-nowrap items-center md:gap-3 gap-0.5 w-full overflow-x-auto px-2 lg:px-4 lg:py-2 rounded-full scrollbar-hide">
                     {categories.map((category) => (
                         <button
                             key={category}
@@ -299,15 +297,15 @@ export default function Gallery() {
                         </button>
                     </div>
                     
-                    <div className="flex flex-wrap gap-3 mb-8">
+                    <div className="flex flex-wrap md:gap-3 gap-0.5 mb-8">
                         {categories.map((category) => (
                             <button
                                 key={category}
                                 onClick={() => toggleTempFilter(category)}
-                                className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all border-2 ${
+                                className={`md:px-5 px-2 md:py-2 py-1 rounded-full text-xs md:text-sm font-bold transition-all border-2 ${
                                     tempFilters.includes(category)
                                     ? "bg-black border-black text-white shadow-lg"
-                                    : "bg-white border-neutral-100 text-neutral-600 hover:border-neutral-200"
+                                    : "bg-white border-neutral-300 text-neutral-600 hover:border-neutral-800"
                                 }`}
                             >
                                 {category}
@@ -318,13 +316,13 @@ export default function Gallery() {
                     <div className="pt-6 border-t border-neutral-100 flex justify-between items-center">
                          <button 
                             onClick={() => setTempFilters(["All"])}
-                            className="text-sm font-bold text-neutral-500 hover:text-black transition-colors"
+                            className="md:text-sm text-xs font-bold text-neutral-500 hover:text-black transition-colors"
                          >
                             Reset to All
                          </button>
                          <button
                             onClick={applyFilters}
-                            className="bg-black text-white px-8 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+                            className="bg-black text-white md:px-6 px-2 md:py-2 py-1 text-sm rounded-xl font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
                          >
                             Apply Filters ({tempFilters.includes("All") ? "All" : tempFilters.length})
                          </button>
@@ -413,7 +411,7 @@ export default function Gallery() {
               <button 
                 onClick={() => setPage((prev) => prev + 1)}
                 disabled={loading}
-                className="bg-black text-white px-8 py-3 rounded-full font-bold hover:bg-neutral-800 transition-all disabled:opacity-50"
+                className="bg-black text-white text-xs md:text-sm md:px-8 px-4 md:py-3 py-1 rounded-full font-bold hover:bg-neutral-800 transition-all disabled:opacity-50"
               >
                 {loading ? "Loading..." : "Load More"}
               </button>
@@ -488,9 +486,9 @@ export default function Gallery() {
              {/* Footer / Controls (Only for Gallery) */}
              {activeTab === "Gallery" && (
                  <>
-                    <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-4">
-                        <p className="text-neutral-900 font-space-grotesk font-medium text-sm bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-white">
-                        {currentItem.title} <span className="text-white/60 text-sm ml-2">({currentImageIndex + 1} / {currentItem.images.length})</span>
+                    <div className="absolute bottom-2 left-0 right-0 flex flex-col items-center">
+                        <p className="text-neutral-400 font-space-grotesk font-medium text-xs bg-white/10 backdrop-blur-md px-4 py-1 rounded">
+                        {currentItem.title} <span className="text-white/50 text-xs ml-2 font-light">({currentImageIndex + 1} / {currentItem.images.length})</span>
                         </p>
                         
                         <div className="flex gap-2 bg-black/50 p-2 rounded-xl backdrop-blur-sm overflow-x-auto max-w-[90vw]">
@@ -509,19 +507,19 @@ export default function Gallery() {
                     </div>
 
                     <button 
-                        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 md:p-4 rounded-full backdrop-blur-sm transition-all"
+                        className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 md:p-4 rounded-full backdrop-blur-sm transition-all"
                         onClick={prevSlide}
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="md:w-6 md:h-6 w-3 h-3">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                         </svg>
                     </button>
 
                     <button 
-                        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 md:p-4 rounded-full backdrop-blur-sm transition-all"
+                        className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 md:p-4 rounded-full backdrop-blur-sm transition-all"
                         onClick={nextSlide}
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="md:w-6 md:h-6 w-3 h-3">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
                     </button>

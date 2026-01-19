@@ -76,11 +76,11 @@ export default function Contact() {
           
           {/* Left Column: Heading & Intro */}
           <div className="flex-1 space-y-3 lg:w-1/2">
-            <h2 className="text-5xl md:text-7xl font-bold leading-tight font-space-grotesk tracking-tight">
+            <h2 className="text-3xl md:text-7xl font-bold leading-tight font-space-grotesk tracking-tight">
               Let&apos;s Create <br/>
               <span className="text-neutral-500">Together.</span>
             </h2>
-            <p className="text-xl text-neutral-500 font-space-grotesk max-w-md leading-relaxed">
+            <p className="text-sm md:text-xl text-neutral-500 font-space-grotesk max-w-md leading-relaxed">
               Every story deserves to be told beautifully. Whether it&apos;s a wedding, 
               a portrait, or a special event, we&apos;re here to capture it.
             </p>
@@ -88,7 +88,7 @@ export default function Contact() {
             <div className="pt-8">
              <a 
                href="tel:+919502559533" 
-               className="inline-flex items-center gap-3 bg-neutral-200 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-neutral-800 transition-colors font-space-grotesk shadow-lg hover:shadow-xl hover:text-white"
+               className="inline-flex items-center gap-3 bg-neutral-200 text-black px-6 py-2 rounded-full font-bold text-lg hover:bg-neutral-800 transition-colors font-space-grotesk shadow-lg hover:shadow-xl hover:text-white"
              >
                Book a Session
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
@@ -107,11 +107,11 @@ export default function Contact() {
                   href={link.href}
                   className="group p-6 rounded-2xl border border-neutral-800/50 bg-neutral-900 hover:border-neutral-800 hover:shadow-lg transition-all duration-300 flex flex-col gap-4 hover:-translate-y-1"
                 >
-                  <div className="w-12 h-12 rounded-full bg-neutral-600 flex items-center justify-center transition-colors group-hover:scale-110 duration-300 group-hover:bg-neutral-200">
+                  <div className="w-full h-10 rounded-full bg-neutral-600 flex items-center justify-between transition-colors group-hover:scale-110 duration-300 group-hover:bg-neutral-200 px-5">
+                    <h3 className="text-sm text-neutral-800 font-spaceMono  uppercase tracking-wider">{link.title}</h3>
                     {link.icon}
                   </div>
                   <div>
-                    <h3 className="text-sm text-neutral-500 font-spaceMono mb-1 uppercase tracking-wider">{link.title}</h3>
                     <p className="text-lg font-semibold font-space-grotesk text-neutral-400 group-hover:text-white transition-colors truncate">
                       {link.value}
                     </p>

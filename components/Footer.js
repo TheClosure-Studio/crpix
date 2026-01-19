@@ -9,17 +9,17 @@ export default function Footer() {
             <h3 className="text-2xl font-bold text-neutral-900 mb-2">
               CR Pix Photography
             </h3>
-            <p className="text-sm text-neutral-500 max-w-xs">
+            <p className="md:text-sm text-xs text-neutral-500 max-w-xs">
               We're a team of the best photography in Tirupati, unveiling untold through art of
               photography.
             </p>
           </div>
           
-          <div className="flex gap-8">
-              <Link href="/" className="text-sm font-bold text-neutral-900 hover:text-neutral-600 transition-colors">Home</Link>
-              <Link href="#about" className="text-sm font-bold text-neutral-900 hover:text-neutral-600 transition-colors">About Us</Link>
-              <Link href="#contact" className="text-sm font-bold text-neutral-900 hover:text-neutral-600 transition-colors">Contact Us</Link>
-              <Link href="/admin" className="text-sm font-bold text-neutral-200 hover:text-neutral-600 transition-colors">Admin</Link>
+          <div className="flex gap-8 text-xs font-spaceMono md:text-sm">
+              <Link href="/" className=" font-bold text-neutral-900 hover:text-neutral-600 transition-colors">Home</Link>
+              <Link href="#about" className=" font-bold text-neutral-900 hover:text-neutral-600 transition-colors">About Us</Link>
+              <Link href="#contact" className=" font-bold text-neutral-900 hover:text-neutral-600 transition-colors">Contact Us</Link>
+              <Link href="/admin" className=" font-bold text-neutral-200 hover:text-neutral-600 transition-colors">Admin</Link>
           </div>
         </div>
 
@@ -27,7 +27,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-xs font-bold text-neutral-900">
           <div className="flex w-full justify-between">
-            <p>©{new Date().getFullYear()} CR Pix Photography, All rights reserved.</p>
+            <p>©{new Date().getFullYear()} CR Pix Photography, <br className="md:hidden"/>All rights reserved.</p>
             <p>Tirupati, India</p>
           </div>
         </div>

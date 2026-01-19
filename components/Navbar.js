@@ -32,7 +32,7 @@ export default function Navbar() {
           <div className="bg-neutral-50/65 backdrop-blur-md rounded-xl px-6 md:px-8 py-2 flex items-center gap-12 w-full md:w-3xl justify-between h-12 relative z-50">
             
             {/* Brand */}
-            <Link href="/" className="text-xl font-bold tracking-tight text-neutral-900 font-space-grotesk z-50 relative">
+            <Link href="/" className="text-md md:text-xl font-bold tracking-tight text-neutral-900 font-space-grotesk z-50 relative">
               CR Pix Photography
             </Link>
 
@@ -83,7 +83,7 @@ export default function Navbar() {
       <div className={` px-10 fixed inset-0 z-40 bg-[#F4F1EA] transition-transform duration-500 ease-in-out lg:hidden flex flex-col items-start justify-center ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}>
         
         {/* Mobile Menu Links */}
-        <div className="flex flex-col items-start gap-6 font-spaceMono text-5xl z-50">
+        <div className="flex flex-col items-start gap-6 font-spaceMono text-3xl z-50">
           <Link 
             href="/" 
             className="text-neutral-900 hover:text-yellow-600 transition-colors font-bold"

@@ -102,10 +102,10 @@ export default function AdminDashboard() {
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold font-space-grotesk mb-2">Upload New Work</h1>
-        <p className="text-neutral-500 font-spaceMono text-sm">Share your latest masterpieces with the world.</p>
+        <p className="text-neutral-500 font-spaceMono text-xs md:text-sm">Share your latest masterpieces with the world.</p>
       </div>
 
-      <div className="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100">
+      <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm border border-neutral-100">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             {/* Left Col: Details */}

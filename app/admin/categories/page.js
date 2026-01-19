@@ -89,7 +89,7 @@ export default function CategoriesPage() {
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold font-space-grotesk mb-2 ">Categories</h1>
-        <p className="text-neutral-500 font-spaceMono text-sm">Organize your portfolio structure.</p>
+        <p className="text-neutral-500 font-spaceMono text-xs md:text-sm">Organize your portfolio structure.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -123,15 +123,15 @@ export default function CategoriesPage() {
              <table className="w-full text-left">
                <thead className="bg-neutral-50 border-b border-neutral-100">
                  <tr>
-                   <th className="px-6 py-4 font-bold text-sm text-neutral-500 font-spaceMono">Name</th>
-                   <th className="px-6 py-4 font-bold text-sm text-neutral-500 font-spaceMono text-right">Actions</th>
+                   <th className="px-6 py-2 font-bold text-xs md:text-sm text-neutral-500 font-spaceMono">Name</th>
+                   <th className="px-6 py-2 font-bold text-xs md:text-sm text-neutral-500 font-spaceMono text-right">Actions</th>
                  </tr>
                </thead>
-               <tbody className="divide-y divide-neutral-100">
+               <tbody className="divide-y divide-neutral-100 ">
                  {loading ? (
                    <tr><td colSpan="2" className="p-8 text-center">Loading...</td></tr>
                  ) : categories.map((cat) => (
-                   <tr key={cat.id} className="hover:bg-neutral-50/50">
+                   <tr key={cat.id} className="hover:bg-neutral-50/50 text-sm md:text-base">
                      <td className="px-6 py-4 font-bold font-space-grotesk">{cat.name}</td>
                      <td className="px-6 py-4 text-right">
                        <button 
