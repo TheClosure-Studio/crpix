@@ -26,9 +26,14 @@ export default function Footer() {
         <div className="h-px w-full bg-neutral-300 mb-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-xs font-bold text-neutral-900">
-          <div className="flex w-full justify-between">
+          <div className="flex w-full justify-between md:justify-center flex-col gap-10 md:gap-0 md:flex-row">
+            <div className="flex w-full justify-between md:w-2/3">
             <p>©{new Date().getFullYear()} CR Pix Photography, <br className="md:hidden"/>All rights reserved.</p>
             <p>Tirupati, India</p>
+            </div>
+            <div className="w-full text-center md:text-right md:w-1/3">
+            <p>Developed by <a href="https://theclosurestudio.vercel.app/" target="_blank" className="text-blue-500 hover:text-blue-800 transition-colors">The Closure Studio.</a></p>
+            </div>
           </div>
         </div>
       </div>

@@ -34,10 +34,10 @@ export default function About() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-7 md:gap-30 mb-20">
           <div className="flex-1 space-y-2">
-            <h3 className="text-2xl md:text-4xl font-semibold leading-snug">
+            <h3 className="text-2xl md:text-4xl font-extrabold leading-snug font-space-grotesk">
               Capture moments that carve a forever space in your heart.
             </h3>
-            <p className="text-neutral-400 font-mono text-sm md:text-lg leading-relaxed font-space-grotesk">
+            <p className="text-neutral-500 text-sm md:text-md tracking-tight ">
               Welcome to CR Pix Photography, a premier photography studio based in Tirupati,
               Andhra Pradesh, dedicated to transforming everyday moments into timeless
               masterpieces. Our team of skilled photographers blends creativity with technical

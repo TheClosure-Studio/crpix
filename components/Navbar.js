@@ -32,7 +32,7 @@ export default function Navbar() {
           <div className="bg-neutral-50/65 backdrop-blur-md rounded-xl px-6 md:px-8 py-2 flex items-center gap-12 w-full md:w-3xl justify-between h-12 relative z-50">
             
             {/* Brand */}
-            <Link href="/" className="text-md md:text-xl font-bold tracking-tight text-neutral-900 font-space-grotesk z-50 relative">
+            <Link href="/" className="text-md md:text-xl font-extrabold tracking-tighter text-neutral-900 font-space-grotesk z-50 relative">
               CR Pix Photography
             </Link>
 

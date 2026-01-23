@@ -1,6 +1,7 @@
-import { Space_Grotesk, Space_Mono } from "next/font/google";
+import { Barrio, Space_Mono } from "next/font/google";
 
-export const spaceGrotesk = Space_Grotesk({
+export const spaceGrotesk = Barrio({
+  weight: "400",
   subsets: ["latin"],
   variable: "--font-space-grotesk",
   display: "swap",
