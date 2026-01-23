@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative w-full h-screen flex items-end pb-24 md:pb-18 overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-gray-900">
         <Image
           src="/assets/hero.svg"
           alt="Cinematic background"
@@ -14,7 +14,7 @@ export default function Hero() {
           priority
         />
         {/* Overlay gradient for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
       </div>
 
       <div className="relative z-10 w-full px-7 lg:px-18 text-white ">

@@ -42,6 +42,8 @@ export default function Navbar() {
                 src="/logo.svg"
                 alt="CR Logo"
                 fill
+                sizes="32px"
+                priority
                 className="object-contain"
               />
             </div>
@@ -165,6 +167,7 @@ export default function Navbar() {
               src="/logo.svg"
               alt="CR Logo"
               fill
+              sizes="80vw"
               className="object-contain"
             />
         </div>

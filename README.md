@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CR Pix Photography
+
+A modern, high-performance portfolio website for CR Pix Photography, built with Next.js. This application showcases photography services, galleries, and videos with a focus on visual excellence and user experience.
+
+## Features
+
+- **Modern Design**: Premium aesthetic with smooth animations, glassmorphism effects, and a responsive layout using Tailwind CSS.
+- **Gallery & Media**: robust gallery system with high-performance image loading, lightbox view, and video support (YouTube & Instagram).
+- **SEO Optimized**: Fully optimized with dynamic metadata, Open Graph support, sitemaps, and robots.txt.
+- **Image Optimization**: Custom shimmer loading effects, responsive image sizing, and priority loading for LCP elements.
+- **Admin Dashboard**: Secure admin area for managing portfolio images and videos.
+- **Contact Integration**: Easy-to-use contact form and social media integration.
+
+## Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Database**: [Supabase](https://supabase.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: Vercel ready
 
 ## Getting Started
 
-First, run the development server:
+1.  Clone the repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    ```bash
+    git clone https://github.com/yourusername/crpix.git
+    cd crpix
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.  Install dependencies:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3.  Set up environment variables:
+    Create a `.env.local` file with your Supabase credentials:
 
-## Learn More
+    ```env
+    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+4.  Run the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    npm run dev
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5.  Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-## Deploy on Vercel
+## SEO Configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The site is configured for the domain `https://crpix.in`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Sitemap**: Automatically generated at `/sitemap.xml`
+- **Robots**: Configured at `/robots.txt`
+- **Open Graph**: Dynamic OG images generated via `app/opengraph-image.js`
+
+## Image Optimization
+
+This project uses advanced techniques for image loading:
+
+- **Shimmer Effect**: A custom CSS animation provides a premium loading experience.
+- **Responsive Sizes**: Images are served in optimal sizes for different devices to save bandwidth.
+- **Priority Loading**: Critical images (Hero, Logo) are prioritized for faster LCP.

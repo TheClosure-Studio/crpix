@@ -109,7 +109,7 @@ export default function ImagesPage() {
       {loading && projects.length === 0 ? (
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {Array.from({ length: 8 }).map((_, i) => (
-                <div key={i} className="bg-gray-100 rounded-2xl aspect-[3/4] animate-pulse" />
+                <div key={i} className="rounded-2xl aspect-[3/4] animate-shimmer" />
             ))}
         </div>
       ) : projects.length === 0 ? (
@@ -126,6 +126,7 @@ export default function ImagesPage() {
                         src={project.thumbnail_url} 
                         alt={project.title} 
                         fill 
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                         className="object-cover" 
                     />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">

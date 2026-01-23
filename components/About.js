@@ -53,6 +53,7 @@ export default function About() {
                 src="/logo.svg"
                 alt="CR Pix Logo"
                 fill
+                sizes="(max-width: 768px) 200px, 240px"
                 className="object-contain"
               />
             </div>
@@ -71,6 +72,7 @@ export default function About() {
                 src={member.image}
                 alt={member.name}
                 fill
+                sizes="(max-width: 768px) 33vw, 384px"
                 className="object-cover"
               />
 

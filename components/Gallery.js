@@ -193,7 +193,7 @@ export default function Gallery() {
       if (!link) return null;
       const ytMatch = link.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=|youtube\.com\/embed\/)([^#&?]*)/);
       if (ytMatch && ytMatch[1]) {
-          return `https://img.youtube.com/vi/${ytMatch[1]}/hqdefault.jpg`;
+          return `https://img.youtube.com/vi/${ytMatch[1]}/maxresdefault.jpg`;
       }
       return null;
   };
@@ -342,7 +342,7 @@ export default function Gallery() {
               Array.from({ length: 8 }).map((_, i) => (
                   <div 
                     key={i} 
-                    className={`relative bg-gray-200 animate-pulse rounded-2xl ${
+                    className={`relative rounded-2xl animate-shimmer ${
                         activeTab === "Videos" ? "aspect-video" : "aspect-[3/4]"
                     }`}
                   />
@@ -369,6 +369,7 @@ export default function Gallery() {
                                 src={thumbnail} 
                                 alt={item.title}
                                 fill
+                                sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                         ) : (
@@ -449,6 +450,7 @@ export default function Gallery() {
                         alt={`Slide ${currentImageIndex}`}
                         fill
                         className="object-contain"
+                        sizes="(max-width: 1024px) 100vw, 1024px"
                         quality={100}
                         priority
                     />
@@ -500,7 +502,8 @@ export default function Gallery() {
                                     idx === currentImageIndex ? "border-yellow-500 opacity-100" : "border-transparent opacity-50 hover:opacity-100"
                                 }`}
                             >
-                                <Image src={img} alt="thumb" fill className="object-cover" />
+                            
+                                <Image src={img} alt="thumb" fill sizes="(max-width: 768px) 48px, 64px" className="object-cover" />
                             </button>
                         ))}
                         </div>
