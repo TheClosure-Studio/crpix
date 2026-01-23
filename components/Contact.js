@@ -76,7 +76,7 @@ export default function Contact() {
           
           {/* Left Column: Heading & Intro */}
           <div className="flex-1 space-y-3 lg:w-1/2">
-            <h2 className="text-3xl md:text-7xl font-bold leading-tight font-space-grotesk tracking-tight">
+            <h2 className="text-3xl md:text-7xl font-bold leading-tight font-barrio">
               Let&apos;s Create <br/>
               <span className="text-neutral-500">Together.</span>
             </h2>

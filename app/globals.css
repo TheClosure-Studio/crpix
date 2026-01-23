@@ -7,6 +7,9 @@
 .font-spaceMono {
   font-family: var(--font-space-mono), Arial, sans-serif;
 }
+.font-barrio {
+  font-family: var(--font-barrio), Arial, sans-serif;
+}
 
 html {
   scroll-behavior: smooth;

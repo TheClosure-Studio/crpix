@@ -1,4 +1,4 @@
-import { spaceGrotesk, spaceMono } from "./fonts";
+import { spaceGrotesk, spaceMono, barrio } from "./fonts";
 import "./globals.css";
 
 import { Toaster } from "react-hot-toast";
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.variable} ${spaceMono.variable} font-space-grotesk font-spaceMono`}>
+      <body className={`${spaceGrotesk.variable} ${barrio.variable}  ${spaceMono.variable} font-space-grotesk font-spaceMono `}>
         {children}
         <Toaster position="top-right" />
       </body>

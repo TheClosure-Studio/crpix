@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-8">
           <div>
-            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+            <h3 className="text-2xl font-bold  mb-2 font-barrio tracking-tight text-yellow-600">
               CR Pix Photography
             </h3>
             <p className="md:text-sm text-xs text-neutral-500 max-w-xs">
