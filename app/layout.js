@@ -10,7 +10,19 @@ export const metadata = {
     template: "%s | CR Pix Photography"
   },
   description: "Capturing moments that carve a forever space in your heart. Premier photography studio in Tirupati offering wedding, portrait, and event photography.",
-  keywords: ["Photography", "Tirupati", "Wedding Photography", "Event Photography", "Portrait", "CR Pix"],
+  keywords: [
+    "CR Pix", 
+    "CR Pix Photography", 
+    "Best Photography in Tirupati", 
+    "Wedding Photography Tirupati", 
+    "Event Photography", 
+    "Portrait Photography", 
+    "Candid Photography", 
+    "Cinematic Wedding Films", 
+    "Pre-wedding Shoots", 
+    "Birthday Photography", 
+    "Corporate Events"
+  ],
   authors: [{ name: "CR Pix Photography" }],
   creator: "CR Pix Photography",
   publisher: "CR Pix Photography",
@@ -62,6 +74,7 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'CR Pix Photography',
+              alternateName: 'CR Pix',
               url: 'https://crpix.in',
               logo: 'https://crpix.in/logo.svg',
               image: 'https://crpix.in/logo.svg',
