@@ -55,6 +55,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${spaceGrotesk.variable} ${barrio.variable}  ${spaceMono.variable} font-space-grotesk font-spaceMono `}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'CR Pix Photography',
+              url: 'https://crpix.in',
+              logo: 'https://crpix.in/logo.svg',
+              image: 'https://crpix.in/logo.svg',
+              description: 'Capturing moments that carve a forever space in your heart. Premier photography studio in Tirupati offering wedding, portrait, and event photography.',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Tirupati',
+                addressRegion: 'Andhra Pradesh',
+                addressCountry: 'IN'
+              }
+            }),
+          }}
+        />
         {children}
         <Toaster position="top-right" />
       </body>
