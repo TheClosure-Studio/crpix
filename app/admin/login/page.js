@@ -12,7 +12,7 @@ export default function AdminLogin() {
   const handleLogin = (e) => {
     e.preventDefault();
     
-    if (username === "cr-pix-007" && password === "Koushik07") {
+    if (username === "crpix" && password === "crpix@2026admin") {
         setIsLoading(true);
       // Set cookie for middleware
       document.cookie = "admin_authenticated=true; path=/; max-age=86400"; // 1 day expiration

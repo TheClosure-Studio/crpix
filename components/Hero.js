@@ -9,7 +9,7 @@ export default function Hero() {
         <Image
           src="/assets/hero.svg"
           alt="Cinematic background"
-          fill
+          fill  
           className="object-cover"
           priority
         />
