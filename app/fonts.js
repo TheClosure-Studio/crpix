@@ -1,4 +1,4 @@
-import { Barrio, Space_Grotesk, Space_Mono } from "next/font/google";
+import { Space_Grotesk, Space_Mono, Sedgwick_Ave_Display } from "next/font/google";
 
 export const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -12,7 +12,7 @@ export const spaceMono = Space_Mono({
   variable: "--font-space-mono",
   display: "swap",
 });
-export const barrio = Barrio({
+export const barrio = Sedgwick_Ave_Display({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-barrio",

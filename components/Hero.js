@@ -4,11 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
-export default function Hero() {
+export default function Hero({ onImageLoad }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [heroImages, setHeroImages] = useState([
-    "/assets/hero.svg", // Default fallback image
-  ]);
+  const [heroImages, setHeroImages] = useState([]);
 
   useEffect(() => {
     const fetchHeroImages = async () => {
@@ -19,6 +17,9 @@ export default function Hero() {
 
       if (data && data.length > 0) {
         setHeroImages(data.map(bg => bg.image_url));
+      } else {
+        // If there are no images from DB, we still trigger load to unblock the site
+        onImageLoad();
       }
     };
     
@@ -39,20 +40,21 @@ export default function Hero() {
     <section className="relative w-full h-screen flex items-end pb-24 md:pb-18 overflow-hidden">
       {/* Background Images Carousel */}
       {heroImages.map((src, index) => (
-        <div
-          key={index}
+          <div
+            key={index}
           className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${
             index === currentImageIndex ? "opacity-100" : "opacity-0"
           } bg-gray-900`}
-        >
-          <Image
-            src={src}
-            alt={`Cinematic background ${index + 1}`}
-            fill
-            className="object-cover"
-            priority={index === 0}
-          />
-        </div>
+            >
+              <Image
+                  src={src}
+                  alt={`Cinematic background ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                  onLoad={index === 0 ? onImageLoad : undefined}
+              />
+            </div>
       ))}
 
       {/* Overlay gradient for text readability */}
@@ -60,7 +62,7 @@ export default function Hero() {
 
       <div className="relative z-10 w-full px-7 lg:px-18 text-white ">
         <div className="max-w-3xl ">
-          <h1 className="text-2xl lg:text-3xl font-semibold leading-tight mb-6 font-space-grotesk">
+          <h1 className="text-sm lg:text-3xl font-semibold leading-tight mb-6 font-space-grotesk">
             We’re a team of the best photography in Tirupati,
             <span className="lg:block opacity-90">
               {" "}
