@@ -17,6 +17,7 @@ export default function AdminLayout({ children }) {
     { label: "Upload Images", href: "/admin",  },
     { label: "Upload Video", href: "/admin/videos/upload",  },
     { label: "Categories", href: "/admin/categories", },
+    { label: "Hero Backgrounds", href: "/admin/hero", },
     { label: "Manage Media", href: "/admin/images", },
     { label: "Manage Videos", href: "/admin/videos", },
   ];
